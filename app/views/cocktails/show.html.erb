@@ -1,0 +1,19 @@
+<h1>This is the cocktail page for <%= @cocktail.name %></h1>
+
+
+<h3> <%= @cocktail.name %> </h3>
+
+<% @cocktail.doses.each do |dose| %>
+ <li> <%= "#{dose.description} -- #{dose.ingredient.name}" %> </li>
+<% end %>
+
+<br>
+<%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-warning" %>
+
+<br>
+<br>
+
+<%= link_to "Back to home page", cocktails_path, class: "btn btn-primary" %>
+
+
+

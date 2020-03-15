@@ -1,0 +1,23 @@
+<div class="container">
+
+  <h1>List of cocktails</h1>
+
+<%= @cocktails.each do |cocktail| %>
+    <div class="card-deck">
+    <div class="card">
+    <img src="https://picsum.photos/200/100" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p> <%= link_to "#{cocktail.name}", cocktail %> </p>
+    </div>
+    <div class="card-footer">
+      <%= link_to "Go to cocktail description", cocktail, class: "btn btn-primary" %>
+    </div>
+</div>
+</div>
+
+
+<% end %>
+
+<%= link_to "Create a new cocktail", new_cocktail_path, class: "btn btn-primary" %>
+</div>
+

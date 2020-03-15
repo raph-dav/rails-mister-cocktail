@@ -63,3 +63,6 @@ gem 'pry-byebug'
 gem 'autoprefixer-rails'
 gem 'simple_form'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
+

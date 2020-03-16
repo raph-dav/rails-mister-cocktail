@@ -5,7 +5,8 @@
 <%= @cocktails.each do |cocktail| %>
     <div class="card-deck">
     <div class="card">
-    <img src="https://picsum.photos/200/100" class="card-img-top" alt="...">
+      <%= cl_image_tag("v7pichxay27vbhxfg5cb",
+      width: 400, height: 300, crop: :fill) %>
     <div class="card-body">
       <p> <%= link_to "#{cocktail.name}", cocktail %> </p>
     </div>
